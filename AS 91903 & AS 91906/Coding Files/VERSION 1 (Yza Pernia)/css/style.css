@@ -1,0 +1,401 @@
+/*Imported Fonts*/
+    /*Poppins*/
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Imported Fonts*/
+
+/*Global Styles*/
+:root{
+    --main-font: 'Poppins', sans-serif;
+    --font-color-one: #FAFAFF;
+    --font-color-two: #E4D9FF;
+    --font-color-three: #8687B4;
+    --font-color-four: #273469;
+    --font-color-five: #1E2749;   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+body{
+    background: var(--font-color-one);
+}
+
+/*Global: Navigation Bar*/
+header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--font-color-five);
+    z-index: 1000;
+}
+
+header .text{
+    position: relative;
+    padding: 5px 10px;
+    color: var(--font-color-one);
+    font-weight: 600;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+header .text:hover{
+    transition: 0.5s;
+    font-size: 35px;
+    text-shadow: 4px 4px 4px var(--font-color-two);
+}
+
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    padding: 5px 10px;
+    color: var(--font-color-one);
+    font-weight: 500;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header ul li a.active{
+    color: var(--font-color-two);
+}
+
+header ul li a:hover{
+    text-shadow: 4px 4px 4px var(--font-color-three);
+}
+
+/*Global: Footer*/
+footer{
+    position: relative;
+    padding: 50px;
+    margin-top: 10px;
+    color: var(--font-color-one);
+    background-color: var(--font-color-five);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+/*Global: Introduction Banner*/
+#intro{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 60vh;
+    padding: 150px 100px 100px;
+    width: 100%;
+    background-color: var(--font-color-two);
+}
+
+section h1{
+    color: var(--font-color-four);
+    font-size: 3.5em;
+}
+
+/*Index Page: Intro Paragraphs*/
+#text .content{
+    padding: 35px;
+}
+#text .content{
+    text-align: center;
+    font-size: 25px;
+    color: var(--font-color-five);
+}
+#intro-paras{
+    margin-bottom: 40vh;
+}
+#intro-paras .components{
+    position: relative;
+    width: 90%;
+    float: left;
+    padding: 50px 30px;
+    min-height: 42vh;
+}
+
+#intro-paras .components .intro-para-1, #intro-paras .components .intro-para-2{
+    position: relative;
+    float: left;
+    width: 410px;
+    height: 190px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-left: 350px;
+    margin-bottom: 20px;
+    padding: 15px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+#intro-paras .components .intro-para-1 p, #intro-paras .components .intro-para-2 p{
+    margin: 0;
+    padding: 0;
+    color: var(--font-color-five);
+    transition: .5s;
+    transition-delay: .5s;
+    transform: scale(.9);
+}
+
+#intro-paras .components .intro-para-1:before, #intro-paras .components .intro-para-2:before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 0%;
+    left: 0%;
+    border-top: 4px solid var(--font-color-five);
+    border-left: 4px solid var(--font-color-five);
+    opacity: 0;
+    transition: .5s;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+#intro-paras .components .intro-para-1:after, #intro-paras .components .intro-para-2:after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    bottom: 0%;
+    right: 0%;
+    border-bottom: 4px solid var(--font-color-five);
+    border-right: 4px solid var(--font-color-five);
+    opacity: 0;
+    transition: .5s;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+#intro-paras .components .intro-para-1:hover:before, #intro-paras .components .intro-para-2:hover:before{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+#intro-paras .components .intro-para-1:hover:after, #intro-paras .components .intro-para-2:hover:after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+#intro-paras .components .intro-para-1:hover p, #intro-paras .components .intro-para-2:hover p{
+    transform: scale(.95);
+}
+
+/*Entries Till Now Page: Entries Submited*/
+.entries{
+    position: relative;
+    width: 1000px;
+    margin: 50px auto 50px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 40px;
+}
+
+.entries .entry-box{
+    position: relative;
+    overflow: hidden;
+    background: var(--font-color-five);
+    transition: 0.5s;
+}
+
+/*New Entry Page: Diary Form*/
+.new-entry-form{
+    width: 570px;
+    background-color: var(--font-color-one);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    margin-top: 6em;
+    position: relative;
+}
+
+form{
+    margin: 35px;
+}
+
+.input-field{
+    width: 500px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 0%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid var(--font-color-five);
+    border-radius: 14px;
+    outline: none;
+}
+
+.textarea-field{
+    height: 400px;
+    padding-top: 10px;
+}
+
+.btn{
+    border-radius: 20px;
+    color: var(--font-color-one);
+    margin-top: 18px;
+    padding: 15px;
+    background-color: var(--font-color-five);
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+/*Log-in Page & Sign-up Page: Log-in & Registration Form*/
+.container-login, .container-signup{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    padding: 120px 120px 120px;
+}
+
+.form{
+    position: relative;
+    background-color: var(--font-color-five);
+    width: 80%;
+    padding: 50px;
+}
+
+.form h2{
+    width: 100%;
+    color: var(--font-color-one);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.form .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+
+.form .row100 .inputBox{
+    position: relative;
+    width: 80%;
+    height: 40px;
+    color: var(--font-color-one);
+    font-weight: 500;
+}
+
+.form .row100 .inputBox input,
+.form .row100 .inputBox.textarea textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: var(--font-color-five);
+
+}
+
+.form .row100 .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form .row100 .inputBox input:focus + .text,
+.form .row100 .inputBox input:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+
+.form .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--font-color-one);
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.form .row100 .inputBox input:focus ~ .line,
+.form .row100 .inputBox input:valid ~ .line{
+    height: 100%;
+}
+
+.form .row100 .inputBox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.form .row100 .inputBox.textarea textarea{
+    height: 100%;
+    resize: none;
+}
+
+.form .row100 .inputBox textarea:focus + .text,
+.form .row100 .inputBox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+
+.form .row100 .inputBox textarea:focus ~ .line,
+.form .row100 .inputBox textarea:valid ~ .line{
+    height: 100%;
+}
+
+input[type="submit"]{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: var(--font-color-one);
+    color: var(--font-color-five);
+    font-size: 18px;
+    border-radius: 2px;
+}
+input[type="submit"]:hover{
+    color: var(--font-color-three);
+    font-weight: 600;
+}
+
+/*Log-in Page: Log-in Form*/
